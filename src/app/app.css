@@ -1,0 +1,29 @@
+/* subtle iOS-like gradient background */
+.body-bg {
+  background:
+    radial-gradient(1200px 600px at 70% -20%, rgba(99,102,241,0.15), transparent),
+    radial-gradient(900px 450px at 0% 0%, rgba(16,185,129,0.10), transparent);
+}
+
+/* glassmorphism helpers */
+.glass {
+  @apply backdrop-blur-xl bg-white/60 dark:bg-zinc-900/40 ring-1 ring-black/5 dark:ring-white/10;
+}
+.card {
+  @apply glass rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.08)];
+}
+.pill {
+  @apply rounded-full border border-black/5 dark:border-white/10 bg-white/70 dark:bg-white/5 ring-1 ring-black/5 dark:ring-white/10;
+}
+.dot {
+  @apply inline-block h-2 w-2 rounded-full align-middle;
+}
+
+/* keyboard tester */
+.kbd {
+  @apply inline-flex items-center justify-center px-2 min-w-8 h-8 text-sm font-medium
+         bg-white/80 dark:bg-white/10 ring-1 ring-black/5 dark:ring-white/10 rounded-xl;
+}
+.kbd-active {
+  @apply bg-emerald-600 text-white;
+}
